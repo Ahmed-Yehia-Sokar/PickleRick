@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB32C6D2B7D0042609A /* AppDelegate.swift */; };
-		8470BCB62C6D2B7E0042609A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB52C6D2B7E0042609A /* SceneDelegate.swift */; };
 		8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB72C6D2B7E0042609A /* ViewController.swift */; };
 		8470BCBB2C6D2B7E0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBA2C6D2B7E0042609A /* Base */; };
 		8470BCBD2C6D2B7F0042609A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBC2C6D2B7F0042609A /* Assets.xcassets */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		8470BCB02C6D2B7D0042609A /* PickleRick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleRick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470BCB32C6D2B7D0042609A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8470BCB52C6D2B7E0042609A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8470BCB72C6D2B7E0042609A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8470BCBA2C6D2B7E0042609A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8470BCBC2C6D2B7F0042609A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,13 +97,9 @@
 		8470BCB22C6D2B7D0042609A /* PickleRick */ = {
 			isa = PBXGroup;
 			children = (
-				8470BCB32C6D2B7D0042609A /* AppDelegate.swift */,
-				8470BCB52C6D2B7E0042609A /* SceneDelegate.swift */,
+				8470BCE32C6D2C850042609A /* Main */,
+				8470BCE42C6D2F0C0042609A /* Storyboards */,
 				8470BCB72C6D2B7E0042609A /* ViewController.swift */,
-				8470BCB92C6D2B7E0042609A /* Main.storyboard */,
-				8470BCBC2C6D2B7F0042609A /* Assets.xcassets */,
-				8470BCBE2C6D2B7F0042609A /* LaunchScreen.storyboard */,
-				8470BCC12C6D2B7F0042609A /* Info.plist */,
 			);
 			path = PickleRick;
 			sourceTree = "<group>";
@@ -125,6 +119,25 @@
 				8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */,
 			);
 			path = PickleRickUITests;
+			sourceTree = "<group>";
+		};
+		8470BCE32C6D2C850042609A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCB32C6D2B7D0042609A /* AppDelegate.swift */,
+				8470BCBC2C6D2B7F0042609A /* Assets.xcassets */,
+				8470BCC12C6D2B7F0042609A /* Info.plist */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8470BCE42C6D2F0C0042609A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCBE2C6D2B7F0042609A /* LaunchScreen.storyboard */,
+				8470BCB92C6D2B7E0042609A /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +273,6 @@
 			files = (
 				8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */,
 				8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */,
-				8470BCB62C6D2B7E0042609A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PickleRick/Info.plist;
+				INFOPLIST_FILE = PickleRick/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -470,7 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PickleRick/Info.plist;
+				INFOPLIST_FILE = PickleRick/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
