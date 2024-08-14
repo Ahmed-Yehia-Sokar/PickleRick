@@ -15,6 +15,13 @@
 		8470BCCB2C6D2B7F0042609A /* PickleRickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCCA2C6D2B7F0042609A /* PickleRickTests.swift */; };
 		8470BCD52C6D2B7F0042609A /* PickleRickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCD42C6D2B7F0042609A /* PickleRickUITests.swift */; };
 		8470BCD72C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */; };
+		8470BCE82C6D33450042609A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8470BCE72C6D33450042609A /* Alamofire */; };
+		8470BCEA2C6D33450042609A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8470BCE92C6D33450042609A /* AlamofireDynamic */; };
+		8470BCF42C6D37570042609A /* ApiRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCEC2C6D37570042609A /* ApiRouterContract.swift */; };
+		8470BCF52C6D37570042609A /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCEE2C6D37570042609A /* ApiConstants.swift */; };
+		8470BCF62C6D37570042609A /* ApiException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCEF2C6D37570042609A /* ApiException.swift */; };
+		8470BCF72C6D37570042609A /* ApiStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCF02C6D37570042609A /* ApiStatusCode.swift */; };
+		8470BCF82C6D37570042609A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCF22C6D37570042609A /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,11 @@
 		8470BCD02C6D2B7F0042609A /* PickleRickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleRickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470BCD42C6D2B7F0042609A /* PickleRickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickUITests.swift; sourceTree = "<group>"; };
 		8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8470BCEC2C6D37570042609A /* ApiRouterContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouterContract.swift; sourceTree = "<group>"; };
+		8470BCEE2C6D37570042609A /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		8470BCEF2C6D37570042609A /* ApiException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiException.swift; sourceTree = "<group>"; };
+		8470BCF02C6D37570042609A /* ApiStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiStatusCode.swift; sourceTree = "<group>"; };
+		8470BCF22C6D37570042609A /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8470BCE82C6D33450042609A /* Alamofire in Frameworks */,
+				8470BCEA2C6D33450042609A /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +111,7 @@
 		8470BCB22C6D2B7D0042609A /* PickleRick */ = {
 			isa = PBXGroup;
 			children = (
+				8470BCEB2C6D36C80042609A /* Common */,
 				8470BCE32C6D2C850042609A /* Main */,
 				8470BCE42C6D2F0C0042609A /* Storyboards */,
 				8470BCB72C6D2B7E0042609A /* ViewController.swift */,
@@ -140,6 +155,42 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		8470BCEB2C6D36C80042609A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCF32C6D37570042609A /* Api */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8470BCED2C6D37570042609A /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCEC2C6D37570042609A /* ApiRouterContract.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		8470BCF12C6D37570042609A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCEE2C6D37570042609A /* ApiConstants.swift */,
+				8470BCEF2C6D37570042609A /* ApiException.swift */,
+				8470BCF02C6D37570042609A /* ApiStatusCode.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8470BCF32C6D37570042609A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCF22C6D37570042609A /* ApiClient.swift */,
+				8470BCED2C6D37570042609A /* Contracts */,
+				8470BCF12C6D37570042609A /* Helpers */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +207,10 @@
 			dependencies = (
 			);
 			name = PickleRick;
+			packageProductDependencies = (
+				8470BCE72C6D33450042609A /* Alamofire */,
+				8470BCE92C6D33450042609A /* AlamofireDynamic */,
+			);
 			productName = PickleRick;
 			productReference = 8470BCB02C6D2B7D0042609A /* PickleRick.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 8470BCA72C6D2B7D0042609A;
+			packageReferences = (
+				8470BCE62C6D33450042609A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8470BCB12C6D2B7D0042609A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -271,7 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8470BCF82C6D37570042609A /* ApiClient.swift in Sources */,
+				8470BCF52C6D37570042609A /* ApiConstants.swift in Sources */,
+				8470BCF42C6D37570042609A /* ApiRouterContract.swift in Sources */,
 				8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */,
+				8470BCF72C6D37570042609A /* ApiStatusCode.swift in Sources */,
+				8470BCF62C6D37570042609A /* ApiException.swift in Sources */,
 				8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +676,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8470BCE62C6D33450042609A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8470BCE72C6D33450042609A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8470BCE62C6D33450042609A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8470BCE92C6D33450042609A /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8470BCE62C6D33450042609A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8470BCA82C6D2B7D0042609A /* Project object */;
 }
