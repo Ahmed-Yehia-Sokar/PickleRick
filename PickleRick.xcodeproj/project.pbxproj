@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB32C6D2B7D0042609A /* AppDelegate.swift */; };
+		8470BCB62C6D2B7E0042609A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB52C6D2B7E0042609A /* SceneDelegate.swift */; };
+		8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB72C6D2B7E0042609A /* ViewController.swift */; };
+		8470BCBB2C6D2B7E0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBA2C6D2B7E0042609A /* Base */; };
+		8470BCBD2C6D2B7F0042609A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBC2C6D2B7F0042609A /* Assets.xcassets */; };
+		8470BCC02C6D2B7F0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBF2C6D2B7F0042609A /* Base */; };
+		8470BCCB2C6D2B7F0042609A /* PickleRickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCCA2C6D2B7F0042609A /* PickleRickTests.swift */; };
+		8470BCD52C6D2B7F0042609A /* PickleRickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCD42C6D2B7F0042609A /* PickleRickUITests.swift */; };
+		8470BCD72C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8470BCC72C6D2B7F0042609A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470BCA82C6D2B7D0042609A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8470BCAF2C6D2B7D0042609A;
+			remoteInfo = PickleRick;
+		};
+		8470BCD12C6D2B7F0042609A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8470BCA82C6D2B7D0042609A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8470BCAF2C6D2B7D0042609A;
+			remoteInfo = PickleRick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8470BCB02C6D2B7D0042609A /* PickleRick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleRick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8470BCB32C6D2B7D0042609A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8470BCB52C6D2B7E0042609A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8470BCB72C6D2B7E0042609A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8470BCBA2C6D2B7E0042609A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8470BCBC2C6D2B7F0042609A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8470BCBF2C6D2B7F0042609A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8470BCC12C6D2B7F0042609A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8470BCC62C6D2B7F0042609A /* PickleRickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleRickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8470BCCA2C6D2B7F0042609A /* PickleRickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickTests.swift; sourceTree = "<group>"; };
+		8470BCD02C6D2B7F0042609A /* PickleRickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleRickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8470BCD42C6D2B7F0042609A /* PickleRickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickUITests.swift; sourceTree = "<group>"; };
+		8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8470BCAD2C6D2B7D0042609A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8470BCC32C6D2B7F0042609A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8470BCCD2C6D2B7F0042609A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8470BCA72C6D2B7D0042609A = {
+			isa = PBXGroup;
+			children = (
+				8470BCB22C6D2B7D0042609A /* PickleRick */,
+				8470BCC92C6D2B7F0042609A /* PickleRickTests */,
+				8470BCD32C6D2B7F0042609A /* PickleRickUITests */,
+				8470BCB12C6D2B7D0042609A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8470BCB12C6D2B7D0042609A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCB02C6D2B7D0042609A /* PickleRick.app */,
+				8470BCC62C6D2B7F0042609A /* PickleRickTests.xctest */,
+				8470BCD02C6D2B7F0042609A /* PickleRickUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8470BCB22C6D2B7D0042609A /* PickleRick */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCB32C6D2B7D0042609A /* AppDelegate.swift */,
+				8470BCB52C6D2B7E0042609A /* SceneDelegate.swift */,
+				8470BCB72C6D2B7E0042609A /* ViewController.swift */,
+				8470BCB92C6D2B7E0042609A /* Main.storyboard */,
+				8470BCBC2C6D2B7F0042609A /* Assets.xcassets */,
+				8470BCBE2C6D2B7F0042609A /* LaunchScreen.storyboard */,
+				8470BCC12C6D2B7F0042609A /* Info.plist */,
+			);
+			path = PickleRick;
+			sourceTree = "<group>";
+		};
+		8470BCC92C6D2B7F0042609A /* PickleRickTests */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCCA2C6D2B7F0042609A /* PickleRickTests.swift */,
+			);
+			path = PickleRickTests;
+			sourceTree = "<group>";
+		};
+		8470BCD32C6D2B7F0042609A /* PickleRickUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCD42C6D2B7F0042609A /* PickleRickUITests.swift */,
+				8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */,
+			);
+			path = PickleRickUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8470BCAF2C6D2B7D0042609A /* PickleRick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8470BCDA2C6D2B7F0042609A /* Build configuration list for PBXNativeTarget "PickleRick" */;
+			buildPhases = (
+				8470BCAC2C6D2B7D0042609A /* Sources */,
+				8470BCAD2C6D2B7D0042609A /* Frameworks */,
+				8470BCAE2C6D2B7D0042609A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PickleRick;
+			productName = PickleRick;
+			productReference = 8470BCB02C6D2B7D0042609A /* PickleRick.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8470BCC52C6D2B7F0042609A /* PickleRickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8470BCDD2C6D2B7F0042609A /* Build configuration list for PBXNativeTarget "PickleRickTests" */;
+			buildPhases = (
+				8470BCC22C6D2B7F0042609A /* Sources */,
+				8470BCC32C6D2B7F0042609A /* Frameworks */,
+				8470BCC42C6D2B7F0042609A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8470BCC82C6D2B7F0042609A /* PBXTargetDependency */,
+			);
+			name = PickleRickTests;
+			productName = PickleRickTests;
+			productReference = 8470BCC62C6D2B7F0042609A /* PickleRickTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8470BCCF2C6D2B7F0042609A /* PickleRickUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8470BCE02C6D2B7F0042609A /* Build configuration list for PBXNativeTarget "PickleRickUITests" */;
+			buildPhases = (
+				8470BCCC2C6D2B7F0042609A /* Sources */,
+				8470BCCD2C6D2B7F0042609A /* Frameworks */,
+				8470BCCE2C6D2B7F0042609A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8470BCD22C6D2B7F0042609A /* PBXTargetDependency */,
+			);
+			name = PickleRickUITests;
+			productName = PickleRickUITests;
+			productReference = 8470BCD02C6D2B7F0042609A /* PickleRickUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8470BCA82C6D2B7D0042609A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					8470BCAF2C6D2B7D0042609A = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					8470BCC52C6D2B7F0042609A = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 8470BCAF2C6D2B7D0042609A;
+					};
+					8470BCCF2C6D2B7F0042609A = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 8470BCAF2C6D2B7D0042609A;
+					};
+				};
+			};
+			buildConfigurationList = 8470BCAB2C6D2B7D0042609A /* Build configuration list for PBXProject "PickleRick" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8470BCA72C6D2B7D0042609A;
+			productRefGroup = 8470BCB12C6D2B7D0042609A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8470BCAF2C6D2B7D0042609A /* PickleRick */,
+				8470BCC52C6D2B7F0042609A /* PickleRickTests */,
+				8470BCCF2C6D2B7F0042609A /* PickleRickUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8470BCAE2C6D2B7D0042609A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8470BCBD2C6D2B7F0042609A /* Assets.xcassets in Resources */,
+				8470BCC02C6D2B7F0042609A /* Base in Resources */,
+				8470BCBB2C6D2B7E0042609A /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8470BCC42C6D2B7F0042609A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8470BCCE2C6D2B7F0042609A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8470BCAC2C6D2B7D0042609A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */,
+				8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */,
+				8470BCB62C6D2B7E0042609A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8470BCC22C6D2B7F0042609A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8470BCCB2C6D2B7F0042609A /* PickleRickTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8470BCCC2C6D2B7F0042609A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8470BCD52C6D2B7F0042609A /* PickleRickUITests.swift in Sources */,
+				8470BCD72C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8470BCC82C6D2B7F0042609A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8470BCAF2C6D2B7D0042609A /* PickleRick */;
+			targetProxy = 8470BCC72C6D2B7F0042609A /* PBXContainerItemProxy */;
+		};
+		8470BCD22C6D2B7F0042609A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8470BCAF2C6D2B7D0042609A /* PickleRick */;
+			targetProxy = 8470BCD12C6D2B7F0042609A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8470BCB92C6D2B7E0042609A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8470BCBA2C6D2B7E0042609A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8470BCBE2C6D2B7F0042609A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8470BCBF2C6D2B7F0042609A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8470BCD82C6D2B7F0042609A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8470BCD92C6D2B7F0042609A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8470BCDB2C6D2B7F0042609A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PickleRick/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelloWorld.PickleRick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8470BCDC2C6D2B7F0042609A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PickleRick/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelloWorld.PickleRick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8470BCDE2C6D2B7F0042609A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelloWorld.PickleRickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickleRick.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PickleRick";
+			};
+			name = Debug;
+		};
+		8470BCDF2C6D2B7F0042609A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelloWorld.PickleRickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickleRick.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PickleRick";
+			};
+			name = Release;
+		};
+		8470BCE12C6D2B7F0042609A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelloWorld.PickleRickUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PickleRick;
+			};
+			name = Debug;
+		};
+		8470BCE22C6D2B7F0042609A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelloWorld.PickleRickUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PickleRick;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8470BCAB2C6D2B7D0042609A /* Build configuration list for PBXProject "PickleRick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8470BCD82C6D2B7F0042609A /* Debug */,
+				8470BCD92C6D2B7F0042609A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8470BCDA2C6D2B7F0042609A /* Build configuration list for PBXNativeTarget "PickleRick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8470BCDB2C6D2B7F0042609A /* Debug */,
+				8470BCDC2C6D2B7F0042609A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8470BCDD2C6D2B7F0042609A /* Build configuration list for PBXNativeTarget "PickleRickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8470BCDE2C6D2B7F0042609A /* Debug */,
+				8470BCDF2C6D2B7F0042609A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8470BCE02C6D2B7F0042609A /* Build configuration list for PBXNativeTarget "PickleRickUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8470BCE12C6D2B7F0042609A /* Debug */,
+				8470BCE22C6D2B7F0042609A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8470BCA82C6D2B7D0042609A /* Project object */;
+}
