@@ -22,6 +22,7 @@
 		8470BCF62C6D37570042609A /* ApiException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCEF2C6D37570042609A /* ApiException.swift */; };
 		8470BCF72C6D37570042609A /* ApiStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCF02C6D37570042609A /* ApiStatusCode.swift */; };
 		8470BCF82C6D37570042609A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCF22C6D37570042609A /* ApiClient.swift */; };
+		8470BCFB2C6D4C240042609A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCF92C6D4C240042609A /* Bindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8470BCEF2C6D37570042609A /* ApiException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiException.swift; sourceTree = "<group>"; };
 		8470BCF02C6D37570042609A /* ApiStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiStatusCode.swift; sourceTree = "<group>"; };
 		8470BCF22C6D37570042609A /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		8470BCF92C6D4C240042609A /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				8470BCF32C6D37570042609A /* Api */,
+				8470BCFA2C6D4C240042609A /* Bindable */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -189,6 +192,14 @@
 				8470BCF12C6D37570042609A /* Helpers */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		8470BCFA2C6D4C240042609A /* Bindable */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCF92C6D4C240042609A /* Bindable.swift */,
+			);
+			path = Bindable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +342,7 @@
 			files = (
 				8470BCF82C6D37570042609A /* ApiClient.swift in Sources */,
 				8470BCF52C6D37570042609A /* ApiConstants.swift in Sources */,
+				8470BCFB2C6D4C240042609A /* Bindable.swift in Sources */,
 				8470BCF42C6D37570042609A /* ApiRouterContract.swift in Sources */,
 				8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */,
 				8470BCF72C6D37570042609A /* ApiStatusCode.swift in Sources */,
