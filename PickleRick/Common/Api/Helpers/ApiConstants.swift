@@ -10,6 +10,5 @@ import Alamofire
 
 class ApiConstants {
     // MARK: - properties
-    static let webserviceUrl = "https://rickandmortyapi.com/api/character"
+    static let webserviceUrl = "https://rickandmortyapi.com/api"
 }
-

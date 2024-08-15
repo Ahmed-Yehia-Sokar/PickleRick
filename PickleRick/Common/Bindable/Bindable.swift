@@ -15,7 +15,7 @@ class Bindable<T> {
         }
     }
     var observer: ((T?) -> ())?
-
+    
     // MARK: - public methods
     func bind(observer: @escaping (T?) -> ()) {
         self.observer = observer
