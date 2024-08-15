@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		843D70222C6EAD0300740E7D /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D70202C6EAD0300740E7D /* DictionaryExtension.swift */; };
 		843D70262C6EBA8400740E7D /* RMCharactersServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D70252C6EBA8400740E7D /* RMCharactersServicesProvider.swift */; };
+		843D70292C6EBE5900740E7D /* ListCharactersUsecaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D70282C6EBE5900740E7D /* ListCharactersUsecaseContract.swift */; };
+		843D702C2C6EBED600740E7D /* ListCharactersUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D702B2C6EBED600740E7D /* ListCharactersUsecase.swift */; };
+		843D702F2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D702E2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift */; };
 		8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB32C6D2B7D0042609A /* AppDelegate.swift */; };
 		8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB72C6D2B7E0042609A /* ViewController.swift */; };
 		8470BCBB2C6D2B7E0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBA2C6D2B7E0042609A /* Base */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		843D70202C6EAD0300740E7D /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		843D70252C6EBA8400740E7D /* RMCharactersServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharactersServicesProvider.swift; sourceTree = "<group>"; };
+		843D70282C6EBE5900740E7D /* ListCharactersUsecaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersUsecaseContract.swift; sourceTree = "<group>"; };
+		843D702B2C6EBED600740E7D /* ListCharactersUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersUsecase.swift; sourceTree = "<group>"; };
+		843D702E2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersUsecaseProvider.swift; sourceTree = "<group>"; };
 		8470BCB02C6D2B7D0042609A /* PickleRick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleRick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470BCB32C6D2B7D0042609A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8470BCB72C6D2B7E0042609A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				843D70242C6EBA4100740E7D /* Services Providers */,
+				843D702D2C6EC26600740E7D /* Usecases Providers */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -126,6 +133,30 @@
 				843D70252C6EBA8400740E7D /* RMCharactersServicesProvider.swift */,
 			);
 			path = "Services Providers";
+			sourceTree = "<group>";
+		};
+		843D70272C6EBE1000740E7D /* Usecases Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				843D70282C6EBE5900740E7D /* ListCharactersUsecaseContract.swift */,
+			);
+			path = "Usecases Contracts";
+			sourceTree = "<group>";
+		};
+		843D702A2C6EBE9A00740E7D /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				843D702B2C6EBED600740E7D /* ListCharactersUsecase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		843D702D2C6EC26600740E7D /* Usecases Providers */ = {
+			isa = PBXGroup;
+			children = (
+				843D702E2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift */,
+			);
+			path = "Usecases Providers";
 			sourceTree = "<group>";
 		};
 		8470BCA72C6D2B7D0042609A = {
@@ -273,6 +304,7 @@
 			children = (
 				84AF0E162C6DE165002EC111 /* Contracts */,
 				84AF0E122C6DDBC5002EC111 /* Entities */,
+				843D702A2C6EBE9A00740E7D /* Usecases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -298,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				84AF0E172C6DE21A002EC111 /* Services Contracts */,
+				843D70272C6EBE1000740E7D /* Usecases Contracts */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -463,14 +496,17 @@
 				8470BCF52C6D37570042609A /* ApiConstants.swift in Sources */,
 				8470BCFB2C6D4C240042609A /* Bindable.swift in Sources */,
 				843D70222C6EAD0300740E7D /* DictionaryExtension.swift in Sources */,
+				843D702F2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift in Sources */,
 				8470BCF42C6D37570042609A /* ApiRouterContract.swift in Sources */,
 				84872D382C6E42690064DAC1 /* RMCharacterDataMapper.swift in Sources */,
 				84AF0E192C6DE2B5002EC111 /* RMCharactersServicesContract.swift in Sources */,
+				843D70292C6EBE5900740E7D /* ListCharactersUsecaseContract.swift in Sources */,
 				8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */,
 				843D70262C6EBA8400740E7D /* RMCharactersServicesProvider.swift in Sources */,
 				8470BCF72C6D37570042609A /* ApiStatusCode.swift in Sources */,
 				84AF0E142C6DDEDC002EC111 /* RMCharacter.swift in Sources */,
 				8470BCF62C6D37570042609A /* ApiException.swift in Sources */,
+				843D702C2C6EBED600740E7D /* ListCharactersUsecase.swift in Sources */,
 				8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
