@@ -32,6 +32,9 @@
 		84872D382C6E42690064DAC1 /* RMCharacterDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872D372C6E42690064DAC1 /* RMCharacterDataMapper.swift */; };
 		84A4F5942C6F6C4F008318B1 /* ListCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F5932C6F6C4F008318B1 /* ListCharactersViewModel.swift */; };
 		84A4F5972C6F6D51008318B1 /* ListCharactersViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F5962C6F6D51008318B1 /* ListCharactersViewModelProvider.swift */; };
+		84A4F59A2C6F7791008318B1 /* RMCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F5992C6F7791008318B1 /* RMCharacterView.swift */; };
+		84A4F59D2C6F7E9D008318B1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84A4F59C2C6F7E9D008318B1 /* Kingfisher */; };
+		84A4F59F2C6FAABC008318B1 /* RMCharacterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F59E2C6FAABC008318B1 /* RMCharacterTableCell.swift */; };
 		84AF0E142C6DDEDC002EC111 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF0E132C6DDEDC002EC111 /* RMCharacter.swift */; };
 		84AF0E192C6DE2B5002EC111 /* RMCharactersServicesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF0E182C6DE2B5002EC111 /* RMCharactersServicesContract.swift */; };
 		84AF0E1C2C6DE56E002EC111 /* RMCharactersServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF0E1B2C6DE56E002EC111 /* RMCharactersServices.swift */; };
@@ -82,6 +85,8 @@
 		84872D372C6E42690064DAC1 /* RMCharacterDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDataMapper.swift; sourceTree = "<group>"; };
 		84A4F5932C6F6C4F008318B1 /* ListCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewModel.swift; sourceTree = "<group>"; };
 		84A4F5962C6F6D51008318B1 /* ListCharactersViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewModelProvider.swift; sourceTree = "<group>"; };
+		84A4F5992C6F7791008318B1 /* RMCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterView.swift; sourceTree = "<group>"; };
+		84A4F59E2C6FAABC008318B1 /* RMCharacterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterTableCell.swift; sourceTree = "<group>"; };
 		84AF0E132C6DDEDC002EC111 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
 		84AF0E182C6DE2B5002EC111 /* RMCharactersServicesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharactersServicesContract.swift; sourceTree = "<group>"; };
 		84AF0E1B2C6DE56E002EC111 /* RMCharactersServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharactersServices.swift; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A4F59D2C6F7E9D008318B1 /* Kingfisher in Frameworks */,
 				8470BCE82C6D33450042609A /* Alamofire in Frameworks */,
 				8470BCEA2C6D33450042609A /* AlamofireDynamic in Frameworks */,
 			);
@@ -290,6 +296,7 @@
 			children = (
 				8470BCB72C6D2B7E0042609A /* ListCharactersViewController.swift */,
 				84A4F5932C6F6C4F008318B1 /* ListCharactersViewModel.swift */,
+				84A4F5982C6F7674008318B1 /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -300,6 +307,15 @@
 				84A4F5962C6F6D51008318B1 /* ListCharactersViewModelProvider.swift */,
 			);
 			path = "ViewModels Providers";
+			sourceTree = "<group>";
+		};
+		84A4F5982C6F7674008318B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84A4F59E2C6FAABC008318B1 /* RMCharacterTableCell.swift */,
+				84A4F5992C6F7791008318B1 /* RMCharacterView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		84AF0E0F2C6DDAF6002EC111 /* Features */ = {
@@ -393,6 +409,7 @@
 			packageProductDependencies = (
 				8470BCE72C6D33450042609A /* Alamofire */,
 				8470BCE92C6D33450042609A /* AlamofireDynamic */,
+				84A4F59C2C6F7E9D008318B1 /* Kingfisher */,
 			);
 			productName = PickleRick;
 			productReference = 8470BCB02C6D2B7D0042609A /* PickleRick.app */;
@@ -468,6 +485,7 @@
 			mainGroup = 8470BCA72C6D2B7D0042609A;
 			packageReferences = (
 				8470BCE62C6D33450042609A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				84A4F59B2C6F7E9D008318B1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 8470BCB12C6D2B7D0042609A /* Products */;
 			projectDirPath = "";
@@ -515,6 +533,8 @@
 				84872D352C6E18640064DAC1 /* RMCharactersApiRouter.swift in Sources */,
 				84AF0E1C2C6DE56E002EC111 /* RMCharactersServices.swift in Sources */,
 				8470BCF82C6D37570042609A /* ApiClient.swift in Sources */,
+				84A4F59F2C6FAABC008318B1 /* RMCharacterTableCell.swift in Sources */,
+				84A4F59A2C6F7791008318B1 /* RMCharacterView.swift in Sources */,
 				84A4F5972C6F6D51008318B1 /* ListCharactersViewModelProvider.swift in Sources */,
 				84A4F5942C6F6C4F008318B1 /* ListCharactersViewModel.swift in Sources */,
 				8470BCF52C6D37570042609A /* ApiConstants.swift in Sources */,
@@ -882,6 +902,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		84A4F59B2C6F7E9D008318B1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -894,6 +922,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8470BCE62C6D33450042609A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		84A4F59C2C6F7E9D008318B1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A4F59B2C6F7E9D008318B1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
