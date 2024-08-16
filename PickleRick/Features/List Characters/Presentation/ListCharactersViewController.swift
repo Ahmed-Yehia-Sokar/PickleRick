@@ -20,8 +20,7 @@ class ListCharactersViewController: UIViewController {
         setupNavigationBarTitle()
         setupTableView()
         bindToDataSource()
-        listCharactersViewModel.listCharacters(isPaginationOn: false,
-                                               errorHandler: listCharactersErrorHandler)
+        listCharactersViewModel.listCharacters(errorHandler: listCharactersErrorHandler)
     }
     
     // MARK: - private methods
@@ -71,5 +70,16 @@ extension ListCharactersViewController: UITableViewDataSource {
         }
         
         return rmCharacterTableCell
+    }
+}
+
+extension ListCharactersViewController: UITableViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > (tableView.contentSize.height - 50) - (scrollView.frame.size.height) {
+            guard !listCharactersViewModel.isPaginationOn else { return }
+            
+            listCharactersViewModel.listCharacters(isPaginationOn: true,
+                                                   errorHandler: listCharactersErrorHandler)
+        }
     }
 }
