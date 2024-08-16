@@ -15,6 +15,7 @@ class RMCharacterTableCell: UITableViewCell {
     // MARK: - public methods
     func configure(with rmCharacter: RMCharacter) {
         setupHostingController(with: rmCharacter)
+        selectionStyle = .none
     }
     
     // MARK: - private methods

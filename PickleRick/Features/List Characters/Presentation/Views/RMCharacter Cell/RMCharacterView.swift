@@ -13,13 +13,13 @@ struct RMCharacterView: View {
     
     var body: some View {
         HStack(spacing: 16.0) {
-            setupCharacterImage()
-            setupCharacterDetails()
+            characterImage
+            characterDetails
             Spacer()
         }
     }
     
-    private func setupCharacterImage() -> some View {
+    private var characterImage: some View {
         KFImage(URL(string: rmCharacter.image))
             .placeholder {
                 Image(systemName: "person.circle")
@@ -35,12 +35,20 @@ struct RMCharacterView: View {
             )
     }
     
-    private func setupCharacterDetails() -> some View {
+    private var characterDetails: some View {
         VStack(alignment: .leading, spacing: 8.0) {
-            Text(rmCharacter.name)
-                .font(.headline)
-            Text(rmCharacter.species)
+            characterNameText
+            characterSpeciesText
         }
+    }
+    
+    private var characterNameText: some View {
+        Text(rmCharacter.name)
+            .font(.headline)
+    }
+    
+    private var characterSpeciesText: some View {
+        Text(rmCharacter.species)
     }
 }
 

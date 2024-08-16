@@ -16,8 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGX-sS-FPC">
+                                <rect key="frame" x="16" y="103" width="377" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="wup-O5-zbx"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hub-CA-nMH">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Adq-5q-966"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NhI-Zc-piB"/>
+                                </connections>
+                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5bW-SU-Jea">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="183" width="393" height="635"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="RXZ-Vr-THN"/>
@@ -28,14 +46,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGX-sS-FPC" secondAttribute="trailing" id="13Y-lf-Tao"/>
+                            <constraint firstItem="5bW-SU-Jea" firstAttribute="top" secondItem="aGX-sS-FPC" secondAttribute="bottom" id="Btw-wp-IPJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5bW-SU-Jea" secondAttribute="trailing" id="Jai-6C-cuW"/>
+                            <constraint firstItem="aGX-sS-FPC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qau-0H-crf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5bW-SU-Jea" secondAttribute="bottom" id="iGl-zK-vpH"/>
-                            <constraint firstItem="5bW-SU-Jea" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jDw-7c-8C4"/>
+                            <constraint firstItem="aGX-sS-FPC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qM2-Qt-coP"/>
                             <constraint firstItem="5bW-SU-Jea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zfE-a6-aOy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u9H-i6-Ren"/>
                     <connections>
+                        <outlet property="collectionView" destination="aGX-sS-FPC" id="v2R-4s-XFP"/>
                         <outlet property="tableView" destination="5bW-SU-Jea" id="gDw-fM-RU2"/>
                     </connections>
                 </viewController>

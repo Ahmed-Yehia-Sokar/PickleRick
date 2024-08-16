@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum FilterOption: String, CaseIterable {
+    case alive = "Alive"
+    case dead = "Dead"
+    case unknown = "Unknown"
+}
+
 class ListCharactersViewModel {
     // MARK: - properties
     private let listCharactersUsecase: ListCharactersUsecaseContract
@@ -42,5 +48,13 @@ class ListCharactersViewModel {
     
     func getRMCharacter(atIndex index: Int) -> RMCharacter? {
         dataSource.value?[index]
+    }
+    
+    func getFiltersCount() -> Int {
+        FilterOption.allCases.count
+    }
+    
+    func getFilter(atIndex index: Int) -> String {
+        FilterOption.allCases[index].rawValue
     }
 }

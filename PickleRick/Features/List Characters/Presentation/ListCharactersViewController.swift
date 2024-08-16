@@ -9,6 +9,7 @@ import UIKit
 
 class ListCharactersViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - properties
@@ -18,6 +19,7 @@ class ListCharactersViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBarTitle()
+        setupCollectionView()
         setupTableView()
         bindToDataSource()
         listCharactersViewModel.listCharacters(errorHandler: listCharactersErrorHandler)
@@ -31,6 +33,10 @@ class ListCharactersViewController: UIViewController {
     
     private func setupTableView() {
         tableView.register(RMCharacterTableCell.self, forCellReuseIdentifier: "RMCharacterTableCell")
+    }
+    
+    private func setupCollectionView() {
+        collectionView.register(RMCharactersFilterCollectionCell.self, forCellWithReuseIdentifier: "RMCharactersFilterCollectionCell")
     }
     
     private func bindToDataSource() {
@@ -75,11 +81,36 @@ extension ListCharactersViewController: UITableViewDataSource {
 
 extension ListCharactersViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > (tableView.contentSize.height - 50) - (scrollView.frame.size.height) {
-            guard !listCharactersViewModel.isPaginationOn else { return }
-            
-            listCharactersViewModel.listCharacters(isPaginationOn: true,
-                                                   errorHandler: listCharactersErrorHandler)
+        if let tableView = scrollView as? UITableView {
+            if scrollView.contentOffset.y > (tableView.contentSize.height - 50) - (scrollView.frame.size.height) {
+                guard !listCharactersViewModel.isPaginationOn else { return }
+                
+                listCharactersViewModel.listCharacters(isPaginationOn: true,
+                                                       errorHandler: listCharactersErrorHandler)
+            }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let rmCharacter = listCharactersViewModel.getRMCharacter(atIndex: indexPath.row) {
+        }
+    }
+}
+
+extension ListCharactersViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        listCharactersViewModel.getFiltersCount()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "RMCharactersFilterCollectionCell", for: indexPath)
+        guard let filterCollectionCell = collectionCell as? RMCharactersFilterCollectionCell else {
+            return UICollectionViewCell()
+        }
+        let filterOption = listCharactersViewModel.getFilter(atIndex: indexPath.row)
+        
+        filterCollectionCell.configure(with: filterOption)
+        
+        return filterCollectionCell
     }
 }
