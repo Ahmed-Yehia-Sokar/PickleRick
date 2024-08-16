@@ -13,7 +13,7 @@
 		843D702C2C6EBED600740E7D /* ListCharactersUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D702B2C6EBED600740E7D /* ListCharactersUsecase.swift */; };
 		843D702F2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D702E2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift */; };
 		8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB32C6D2B7D0042609A /* AppDelegate.swift */; };
-		8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB72C6D2B7E0042609A /* ViewController.swift */; };
+		8470BCB82C6D2B7E0042609A /* ListCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB72C6D2B7E0042609A /* ListCharactersViewController.swift */; };
 		8470BCBB2C6D2B7E0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBA2C6D2B7E0042609A /* Base */; };
 		8470BCBD2C6D2B7F0042609A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBC2C6D2B7F0042609A /* Assets.xcassets */; };
 		8470BCC02C6D2B7F0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBF2C6D2B7F0042609A /* Base */; };
@@ -30,6 +30,8 @@
 		8470BCFB2C6D4C240042609A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCF92C6D4C240042609A /* Bindable.swift */; };
 		84872D352C6E18640064DAC1 /* RMCharactersApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872D342C6E18640064DAC1 /* RMCharactersApiRouter.swift */; };
 		84872D382C6E42690064DAC1 /* RMCharacterDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872D372C6E42690064DAC1 /* RMCharacterDataMapper.swift */; };
+		84A4F5942C6F6C4F008318B1 /* ListCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F5932C6F6C4F008318B1 /* ListCharactersViewModel.swift */; };
+		84A4F5972C6F6D51008318B1 /* ListCharactersViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F5962C6F6D51008318B1 /* ListCharactersViewModelProvider.swift */; };
 		84AF0E142C6DDEDC002EC111 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF0E132C6DDEDC002EC111 /* RMCharacter.swift */; };
 		84AF0E192C6DE2B5002EC111 /* RMCharactersServicesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF0E182C6DE2B5002EC111 /* RMCharactersServicesContract.swift */; };
 		84AF0E1C2C6DE56E002EC111 /* RMCharactersServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF0E1B2C6DE56E002EC111 /* RMCharactersServices.swift */; };
@@ -60,7 +62,7 @@
 		843D702E2C6EC29400740E7D /* ListCharactersUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersUsecaseProvider.swift; sourceTree = "<group>"; };
 		8470BCB02C6D2B7D0042609A /* PickleRick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleRick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470BCB32C6D2B7D0042609A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8470BCB72C6D2B7E0042609A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8470BCB72C6D2B7E0042609A /* ListCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewController.swift; sourceTree = "<group>"; };
 		8470BCBA2C6D2B7E0042609A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8470BCBC2C6D2B7F0042609A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8470BCBF2C6D2B7F0042609A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 		8470BCF92C6D4C240042609A /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		84872D342C6E18640064DAC1 /* RMCharactersApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharactersApiRouter.swift; sourceTree = "<group>"; };
 		84872D372C6E42690064DAC1 /* RMCharacterDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDataMapper.swift; sourceTree = "<group>"; };
+		84A4F5932C6F6C4F008318B1 /* ListCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewModel.swift; sourceTree = "<group>"; };
+		84A4F5962C6F6D51008318B1 /* ListCharactersViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewModelProvider.swift; sourceTree = "<group>"; };
 		84AF0E132C6DDEDC002EC111 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
 		84AF0E182C6DE2B5002EC111 /* RMCharactersServicesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharactersServicesContract.swift; sourceTree = "<group>"; };
 		84AF0E1B2C6DE56E002EC111 /* RMCharactersServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharactersServices.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			children = (
 				843D70242C6EBA4100740E7D /* Services Providers */,
 				843D702D2C6EC26600740E7D /* Usecases Providers */,
+				84A4F5952C6F6D14008318B1 /* ViewModels Providers */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -186,7 +191,6 @@
 				84AF0E0F2C6DDAF6002EC111 /* Features */,
 				8470BCE32C6D2C850042609A /* Main */,
 				8470BCE42C6D2F0C0042609A /* Storyboards */,
-				8470BCB72C6D2B7E0042609A /* ViewController.swift */,
 			);
 			path = PickleRick;
 			sourceTree = "<group>";
@@ -281,6 +285,23 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		84A4F5922C6F6ACA008318B1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCB72C6D2B7E0042609A /* ListCharactersViewController.swift */,
+				84A4F5932C6F6C4F008318B1 /* ListCharactersViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		84A4F5952C6F6D14008318B1 /* ViewModels Providers */ = {
+			isa = PBXGroup;
+			children = (
+				84A4F5962C6F6D51008318B1 /* ListCharactersViewModelProvider.swift */,
+			);
+			path = "ViewModels Providers";
+			sourceTree = "<group>";
+		};
 		84AF0E0F2C6DDAF6002EC111 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +316,7 @@
 				84AF0E152C6DE12D002EC111 /* Data */,
 				843D70232C6EBA1C00740E7D /* Dependencies */,
 				84AF0E112C6DDB7A002EC111 /* Domain */,
+				84A4F5922C6F6ACA008318B1 /* Presentation */,
 			);
 			path = "List Characters";
 			sourceTree = "<group>";
@@ -493,6 +515,8 @@
 				84872D352C6E18640064DAC1 /* RMCharactersApiRouter.swift in Sources */,
 				84AF0E1C2C6DE56E002EC111 /* RMCharactersServices.swift in Sources */,
 				8470BCF82C6D37570042609A /* ApiClient.swift in Sources */,
+				84A4F5972C6F6D51008318B1 /* ListCharactersViewModelProvider.swift in Sources */,
+				84A4F5942C6F6C4F008318B1 /* ListCharactersViewModel.swift in Sources */,
 				8470BCF52C6D37570042609A /* ApiConstants.swift in Sources */,
 				8470BCFB2C6D4C240042609A /* Bindable.swift in Sources */,
 				843D70222C6EAD0300740E7D /* DictionaryExtension.swift in Sources */,
@@ -501,7 +525,7 @@
 				84872D382C6E42690064DAC1 /* RMCharacterDataMapper.swift in Sources */,
 				84AF0E192C6DE2B5002EC111 /* RMCharactersServicesContract.swift in Sources */,
 				843D70292C6EBE5900740E7D /* ListCharactersUsecaseContract.swift in Sources */,
-				8470BCB82C6D2B7E0042609A /* ViewController.swift in Sources */,
+				8470BCB82C6D2B7E0042609A /* ListCharactersViewController.swift in Sources */,
 				843D70262C6EBA8400740E7D /* RMCharactersServicesProvider.swift in Sources */,
 				8470BCF72C6D37570042609A /* ApiStatusCode.swift in Sources */,
 				84AF0E142C6DDEDC002EC111 /* RMCharacter.swift in Sources */,
