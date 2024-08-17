@@ -15,12 +15,13 @@
 		84445C9D2C70B0E200732ADD /* DisplayCharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84445C9C2C70B0E200732ADD /* DisplayCharacterDetailsViewModel.swift */; };
 		84445CA12C70B83700732ADD /* DisplayCharacterDetailsViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84445CA02C70B83700732ADD /* DisplayCharacterDetailsViewModelProvider.swift */; };
 		84445CA32C70BDA900732ADD /* DisplayCharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84445CA22C70BDA900732ADD /* DisplayCharacterDetailsViewController.swift */; };
+		845BCD492C70E383000D3ED1 /* MockRMCharactersServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BCD482C70E383000D3ED1 /* MockRMCharactersServices.swift */; };
 		8470BCB42C6D2B7D0042609A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB32C6D2B7D0042609A /* AppDelegate.swift */; };
 		8470BCB82C6D2B7E0042609A /* ListCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCB72C6D2B7E0042609A /* ListCharactersViewController.swift */; };
 		8470BCBB2C6D2B7E0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBA2C6D2B7E0042609A /* Base */; };
 		8470BCBD2C6D2B7F0042609A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBC2C6D2B7F0042609A /* Assets.xcassets */; };
 		8470BCC02C6D2B7F0042609A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8470BCBF2C6D2B7F0042609A /* Base */; };
-		8470BCCB2C6D2B7F0042609A /* PickleRickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCCA2C6D2B7F0042609A /* PickleRickTests.swift */; };
+		8470BCCB2C6D2B7F0042609A /* ListCharactersUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCCA2C6D2B7F0042609A /* ListCharactersUsecaseTests.swift */; };
 		8470BCD52C6D2B7F0042609A /* PickleRickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCD42C6D2B7F0042609A /* PickleRickUITests.swift */; };
 		8470BCD72C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */; };
 		8470BCE82C6D33450042609A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8470BCE72C6D33450042609A /* Alamofire */; };
@@ -71,6 +72,7 @@
 		84445C9C2C70B0E200732ADD /* DisplayCharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		84445CA02C70B83700732ADD /* DisplayCharacterDetailsViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCharacterDetailsViewModelProvider.swift; sourceTree = "<group>"; };
 		84445CA22C70BDA900732ADD /* DisplayCharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		845BCD482C70E383000D3ED1 /* MockRMCharactersServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRMCharactersServices.swift; sourceTree = "<group>"; };
 		8470BCB02C6D2B7D0042609A /* PickleRick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleRick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470BCB32C6D2B7D0042609A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8470BCB72C6D2B7E0042609A /* ListCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 		8470BCBF2C6D2B7F0042609A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8470BCC12C6D2B7F0042609A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8470BCC62C6D2B7F0042609A /* PickleRickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleRickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8470BCCA2C6D2B7F0042609A /* PickleRickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickTests.swift; sourceTree = "<group>"; };
+		8470BCCA2C6D2B7F0042609A /* ListCharactersUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersUsecaseTests.swift; sourceTree = "<group>"; };
 		8470BCD02C6D2B7F0042609A /* PickleRickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleRickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470BCD42C6D2B7F0042609A /* PickleRickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickUITests.swift; sourceTree = "<group>"; };
 		8470BCD62C6D2B7F0042609A /* PickleRickUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickleRickUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -214,6 +216,54 @@
 			path = "ViewModels Providers";
 			sourceTree = "<group>";
 		};
+		84445CA42C70DF5300732ADD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				84445CA52C70DF6500732ADD /* List Characters */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		84445CA52C70DF6500732ADD /* List Characters */ = {
+			isa = PBXGroup;
+			children = (
+				84445CA62C70DF7000732ADD /* Domain */,
+			);
+			path = "List Characters";
+			sourceTree = "<group>";
+		};
+		84445CA62C70DF7000732ADD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				84445CA72C70DF9F00732ADD /* Usecases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		84445CA72C70DF9F00732ADD /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				8470BCCA2C6D2B7F0042609A /* ListCharactersUsecaseTests.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		845BCD462C70E345000D3ED1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				845BCD472C70E36C000D3ED1 /* Generated Mocks */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		845BCD472C70E36C000D3ED1 /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				845BCD482C70E383000D3ED1 /* MockRMCharactersServices.swift */,
+			);
+			path = "Generated Mocks";
+			sourceTree = "<group>";
+		};
 		8470BCA72C6D2B7D0042609A = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +298,8 @@
 		8470BCC92C6D2B7F0042609A /* PickleRickTests */ = {
 			isa = PBXGroup;
 			children = (
-				8470BCCA2C6D2B7F0042609A /* PickleRickTests.swift */,
+				84445CA42C70DF5300732ADD /* Features */,
+				845BCD462C70E345000D3ED1 /* Main */,
 			);
 			path = PickleRickTests;
 			sourceTree = "<group>";
@@ -627,7 +678,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8470BCCB2C6D2B7F0042609A /* PickleRickTests.swift in Sources */,
+				845BCD492C70E383000D3ED1 /* MockRMCharactersServices.swift in Sources */,
+				8470BCCB2C6D2B7F0042609A /* ListCharactersUsecaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RMCharacter {
+struct RMCharacter: Equatable {
     // MARK: - properties
     let name: String,
         status: String,
