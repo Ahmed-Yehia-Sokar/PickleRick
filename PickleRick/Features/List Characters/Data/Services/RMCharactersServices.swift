@@ -9,10 +9,10 @@ import Foundation
 
 class RMCharactersServices: RMCharactersServicesContract {
     // MARK: - properties
-    private var apiClient: ApiClient
+    private var apiClient: ApiClientContract
     
     // MARK: - public methods
-    init(apiClient: ApiClient) {
+    init(apiClient: ApiClientContract) {
         self.apiClient = apiClient
     }
     

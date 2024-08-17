@@ -32,7 +32,7 @@ final class ListCharactersUsecaseTests: XCTestCase {
 
         // Act
         listCharactersUsecase.fetchRMCharacters(pageNumber: 1,
-                                                status: "alive") { characters in
+                                                status: "") { characters in
             // Assert
             XCTAssertEqual(characters.count, 1)
             XCTAssertEqual(characters[0], RMCharacter.example)
@@ -41,7 +41,7 @@ final class ListCharactersUsecaseTests: XCTestCase {
         }
     }
     
-    func testFetchRMCharacters_Error() {
+    func testFetchRMCharacters_Failure() {
         // Arrange
         guard let mockService = mockService else {
             XCTFail("mock service instance is nil")
@@ -54,7 +54,7 @@ final class ListCharactersUsecaseTests: XCTestCase {
                 
         // Act
         listCharactersUsecase.fetchRMCharacters(pageNumber: 1,
-                                                status: "alive") { characters in
+                                                status: "") { characters in
             XCTFail("Unexpected success")
         } errorHandler: { error in
             // Assert

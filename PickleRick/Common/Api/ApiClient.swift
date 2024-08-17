@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class ApiClient {
+class ApiClient: ApiClientContract {
     // MARK: - public methods
     func performRequest(url: String,
                         parameters: Parameters? = nil,
