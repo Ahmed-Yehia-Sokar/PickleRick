@@ -9,27 +9,24 @@ import XCTest
 @testable import PickleRick
 
 final class ListCharactersUsecaseTests: XCTestCase {
-    private var mockService: MockRMCharactersServices?
+    private var mockServices: MockRMCharactersServices!
+    private var listCharactersUsecase: ListCharactersUsecase!
     
     override func setUpWithError() throws {
-        mockService = MockRMCharactersServices()
+        mockServices = MockRMCharactersServices()
+        listCharactersUsecase = ListCharactersUsecase(rmCharactersServices: mockServices)
     }
 
     override func tearDownWithError() throws {
-        mockService = nil
+        mockServices = nil
+        listCharactersUsecase = nil
     }
     
     func testFetchRMCharacters_Success() {
         // Arrange
-        guard let mockService = mockService else {
-            XCTFail("mock service instance is nil")
-            return
-        }
-        mockService.shouldSucceed = true
-        mockService.charactersToReturn = [RMCharacter.example]
+        mockServices.shouldSucceed = true
+        mockServices.charactersToReturn = [RMCharacter.example]
         
-        let listCharactersUsecase = ListCharactersUsecase(rmCharactersServices: mockService)
-
         // Act
         listCharactersUsecase.fetchRMCharacters(pageNumber: 1,
                                                 status: "") { characters in
@@ -43,14 +40,8 @@ final class ListCharactersUsecaseTests: XCTestCase {
     
     func testFetchRMCharacters_Failure() {
         // Arrange
-        guard let mockService = mockService else {
-            XCTFail("mock service instance is nil")
-            return
-        }
-        mockService.shouldSucceed = false
-        mockService.errorToReturn = "Network error"
-        
-        let listCharactersUsecase = ListCharactersUsecase(rmCharactersServices: mockService)
+        mockServices.shouldSucceed = false
+        mockServices.errorToReturn = "Network error"
                 
         // Act
         listCharactersUsecase.fetchRMCharacters(pageNumber: 1,

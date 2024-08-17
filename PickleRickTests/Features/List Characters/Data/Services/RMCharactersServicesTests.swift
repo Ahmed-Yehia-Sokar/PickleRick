@@ -9,22 +9,21 @@ import XCTest
 @testable import PickleRick
 
 final class RMCharactersServicesTests: XCTestCase {
-    private var mockApiClient: MockApiClient?
+    private var mockApiClient: MockApiClient!
+    private var rmCharactersServices: RMCharactersServices!
     
     override func setUpWithError() throws {
         mockApiClient = MockApiClient()
+        rmCharactersServices = RMCharactersServices(apiClient: mockApiClient)
     }
     
     override func tearDownWithError() throws {
         mockApiClient = nil
+        rmCharactersServices = nil
     }
     
     func testFetchRMCharacters_Success() {
         // Arrange
-        guard let mockApiClient = mockApiClient else {
-            XCTFail("mock api client instance is nil")
-            return
-        }
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: "rm_characters_response", withExtension: "json"),
               let data = try? Data(contentsOf: url),
@@ -32,7 +31,6 @@ final class RMCharactersServicesTests: XCTestCase {
             XCTFail("Failed to load mock response from JSON file")
             return
         }
-        let rmCharactersServices = RMCharactersServices(apiClient: mockApiClient)
         let expectedCharacters = RMCharacterDataMapper.map(fetchRMCharactersResponse: mockResponse)
 
         // Act
@@ -50,17 +48,12 @@ final class RMCharactersServicesTests: XCTestCase {
         mockApiClient.performRequestSuccessHandler?(mockResponse)
     }
 
-    func testFetchRMCharactersFailure() {
+    func testFetchRMCharacters_Failure() {
         // Arrange
-        guard let mockApiClient = mockApiClient else {
-            XCTFail("mock api client instance is nil")
-            return
-        }
-        let rmCharactersServices = RMCharactersServices(apiClient: mockApiClient)
         let mockApiException = ApiException(statusCode: .noInternetConnection)
         let expectedError = "Check your internet connection"
 
-        // act
+        // Act
         rmCharactersServices.fetchRMCharacters(pageNumber: 1,
                                                status: "",
                                                completionHandler: { characters in
