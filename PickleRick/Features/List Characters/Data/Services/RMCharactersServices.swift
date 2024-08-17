@@ -17,11 +17,14 @@ class RMCharactersServices: RMCharactersServicesContract {
     }
     
     func fetchRMCharacters(pageNumber: Int,
+                           status: String,
                            completionHandler: @escaping ([RMCharacter]) -> Void,
                            errorHandler: @escaping (String) -> Void) {
-        let rmCharactersApi = RMCharactersApiRouter.fetchRMCharacters(pageNumber: pageNumber)
+        let rmCharactersApi = RMCharactersApiRouter.fetchRMCharacters(pageNumber: pageNumber, 
+                                                                      status: status)
         
         apiClient.performRequest(url: rmCharactersApi.path,
+                                 parameters: rmCharactersApi.parameters,
                                  method: rmCharactersApi.method,
                                  successHandler: { response in
             let rmCharactersList = RMCharacterDataMapper.map(fetchRMCharactersResponse: response)

@@ -1,5 +1,5 @@
 //
-//  RMCharacterView.swift
+//  CharacterCellView.swift
 //  PickleRick
 //
 //  Created by Admin on 16/08/2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct RMCharacterView: View {
+struct CharacterCellView: View {
     let rmCharacter: RMCharacter
     
     var body: some View {
@@ -53,5 +53,5 @@ struct RMCharacterView: View {
 }
 
 #Preview {
-    RMCharacterView(rmCharacter: RMCharacter.example)
+    CharacterCellView(rmCharacter: RMCharacter.example)
 }

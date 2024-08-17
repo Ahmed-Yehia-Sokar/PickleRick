@@ -1,5 +1,5 @@
 //
-//  RMCharactersFilterView.swift
+//  FilterCellView.swift
 //  PickleRick
 //
 //  Created by Admin on 16/08/2024.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct RMCharactersFilterView: View {
-    var filterName: String
+struct FilterCellView: View {
+    var filterOption: FilterOption
     
     var body: some View {
         filterNameText
     }
     
     private var filterNameText: some View {
-        Text(filterName)
+        Text(filterOption.rawValue)
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
@@ -25,5 +25,5 @@ struct RMCharactersFilterView: View {
 }
 
 #Preview {
-    RMCharactersFilterView(filterName: "Alive")
+    FilterCellView(filterOption: .all)
 }

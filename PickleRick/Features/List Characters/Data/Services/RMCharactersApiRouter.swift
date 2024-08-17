@@ -9,7 +9,8 @@ import Foundation
 import Alamofire
 
 enum RMCharactersApiRouter: ApiRouterContract {
-    case fetchRMCharacters(pageNumber: Int)
+    case fetchRMCharacters(pageNumber: Int,
+                           status: String)
     
     var method: HTTPMethod {
         switch self {
@@ -19,8 +20,18 @@ enum RMCharactersApiRouter: ApiRouterContract {
     }
     var path: String {
         switch self {
-        case .fetchRMCharacters(let pageNumber):
-            return "\(ApiConstants.webserviceUrl)/character/?page=\(pageNumber)"
+        case .fetchRMCharacters:
+            return "\(ApiConstants.webserviceUrl)/character"
+        }
+    }
+    var parameters: Parameters {
+        switch self {
+        case .fetchRMCharacters(let pageNumber,
+                                let status):
+            return [
+                "page": pageNumber,
+                "status": status
+            ]
         }
     }
 }

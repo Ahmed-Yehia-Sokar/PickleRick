@@ -9,6 +9,7 @@ import Foundation
 
 protocol ListCharactersUsecaseContract {
     func fetchRMCharacters(pageNumber: Int,
+                           status: String,
                            completionHandler: @escaping ([RMCharacter]) -> Void,
                            errorHandler: @escaping (String) -> Void)
 }

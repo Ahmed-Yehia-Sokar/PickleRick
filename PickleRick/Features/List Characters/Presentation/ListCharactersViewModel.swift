@@ -8,6 +8,7 @@
 import Foundation
 
 enum FilterOption: String, CaseIterable {
+    case all = "All"
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "Unknown"
@@ -27,13 +28,21 @@ class ListCharactersViewModel {
     }
     
     func listCharacters(isPaginationOn: Bool = false,
+                        filterOption: FilterOption = .all,
                         errorHandler: @escaping (String) -> Void) {
         if isPaginationOn {
             currentPage += 1
             self.isPaginationOn = true
         }
         
-        listCharactersUsecase.fetchRMCharacters(pageNumber: currentPage) { [weak self] newCharactersList in
+        var status = filterOption.rawValue
+        
+        if filterOption == .all {
+            status = ""
+        }
+        
+        listCharactersUsecase.fetchRMCharacters(pageNumber: currentPage,
+                                                status: status) { [weak self] newCharactersList in
             guard let unwrappedSelf = self else { return }
             unwrappedSelf.dataSource.value?.append(contentsOf: newCharactersList)
             unwrappedSelf.isPaginationOn = false
@@ -54,7 +63,13 @@ class ListCharactersViewModel {
         FilterOption.allCases.count
     }
     
-    func getFilter(atIndex index: Int) -> String {
-        FilterOption.allCases[index].rawValue
+    func getFilter(atIndex index: Int) -> FilterOption {
+        FilterOption.allCases[index]
+    }
+    
+    func resetPagination() {
+        currentPage = 1
+        isPaginationOn = false
+        dataSource.value = []
     }
 }

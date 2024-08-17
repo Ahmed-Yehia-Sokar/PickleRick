@@ -32,11 +32,11 @@ class ListCharactersViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(RMCharacterTableCell.self, forCellReuseIdentifier: "RMCharacterTableCell")
+        tableView.register(CharacterTableViewCell.self, forCellReuseIdentifier: "CharacterTableViewCell")
     }
     
     private func setupCollectionView() {
-        collectionView.register(RMCharactersFilterCollectionCell.self, forCellWithReuseIdentifier: "RMCharactersFilterCollectionCell")
+        collectionView.register(FilterCollectionCell.self, forCellWithReuseIdentifier: "FilterCollectionCell")
     }
     
     private func bindToDataSource() {
@@ -66,16 +66,16 @@ extension ListCharactersViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "RMCharacterTableCell", for: indexPath)
-        guard let rmCharacterTableCell = tableCell as? RMCharacterTableCell else {
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell", for: indexPath)
+        guard let characterTableViewCell = tableCell as? CharacterTableViewCell else {
             return UITableViewCell()
         }
         
         if let rmCharacter = listCharactersViewModel.getRMCharacter(atIndex: indexPath.row) {
-            rmCharacterTableCell.configure(with: rmCharacter)
+            characterTableViewCell.configure(with: rmCharacter)
         }
         
-        return rmCharacterTableCell
+        return characterTableViewCell
     }
 }
 
@@ -103,8 +103,8 @@ extension ListCharactersViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "RMCharactersFilterCollectionCell", for: indexPath)
-        guard let filterCollectionCell = collectionCell as? RMCharactersFilterCollectionCell else {
+        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterCollectionCell", for: indexPath)
+        guard let filterCollectionCell = collectionCell as? FilterCollectionCell else {
             return UICollectionViewCell()
         }
         let filterOption = listCharactersViewModel.getFilter(atIndex: indexPath.row)
@@ -112,5 +112,15 @@ extension ListCharactersViewController: UICollectionViewDataSource {
         filterCollectionCell.configure(with: filterOption)
         
         return filterCollectionCell
+    }
+}
+
+extension ListCharactersViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let filterOption = listCharactersViewModel.getFilter(atIndex: indexPath.row)
+        
+        listCharactersViewModel.resetPagination()
+        listCharactersViewModel.listCharacters(filterOption: filterOption,
+                                               errorHandler: listCharactersErrorHandler)
     }
 }

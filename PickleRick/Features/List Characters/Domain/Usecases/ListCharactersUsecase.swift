@@ -16,10 +16,12 @@ class ListCharactersUsecase: ListCharactersUsecaseContract {
         self.rmCharactersServices = rmCharactersServices
     }
     
-    func fetchRMCharacters(pageNumber: Int, 
+    func fetchRMCharacters(pageNumber: Int,
+                           status: String,
                            completionHandler: @escaping ([RMCharacter]) -> Void,
                            errorHandler: @escaping (String) -> Void) {
         rmCharactersServices.fetchRMCharacters(pageNumber: pageNumber,
+                                               status: status,
                                                completionHandler: completionHandler,
                                                errorHandler: errorHandler)
     }
