@@ -13,7 +13,7 @@ class ListCharactersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - properties
-    private let listCharactersViewModel = ListCharactersViewModelProvider.provide()
+    private let viewModel = ListCharactersViewModelProvider.provide()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ListCharactersViewController: UIViewController {
         setupCollectionView()
         setupTableView()
         bindToDataSource()
-        listCharactersViewModel.listCharacters(errorHandler: listCharactersErrorHandler)
+        viewModel.listCharacters(errorHandler: listCharactersErrorHandler)
     }
     
     // MARK: - private methods
@@ -40,7 +40,7 @@ class ListCharactersViewController: UIViewController {
     }
     
     private func bindToDataSource() {
-        listCharactersViewModel.dataSource.bind { [weak self] dataSource in
+        viewModel.dataSource.bind { [weak self] dataSource in
             guard let unwrappedSelf = self else { return }
             if let dataSource = dataSource, !dataSource.isEmpty {
                 unwrappedSelf.tableView.reloadData()
@@ -62,7 +62,7 @@ class ListCharactersViewController: UIViewController {
 
 extension ListCharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listCharactersViewModel.getCharactersCount()
+        viewModel.getCharactersCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,7 +71,7 @@ extension ListCharactersViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let rmCharacter = listCharactersViewModel.getRMCharacter(atIndex: indexPath.row) {
+        if let rmCharacter = viewModel.getRMCharacter(atIndex: indexPath.row) {
             characterTableViewCell.configure(with: rmCharacter)
         }
         
@@ -83,23 +83,31 @@ extension ListCharactersViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let tableView = scrollView as? UITableView {
             if scrollView.contentOffset.y > (tableView.contentSize.height - 50) - (scrollView.frame.size.height) {
-                guard !listCharactersViewModel.isPaginationOn else { return }
+                guard !viewModel.isPaginationOn else { return }
                 
-                listCharactersViewModel.listCharacters(isPaginationOn: true,
+                viewModel.listCharacters(isPaginationOn: true,
                                                        errorHandler: listCharactersErrorHandler)
             }
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let rmCharacter = listCharactersViewModel.getRMCharacter(atIndex: indexPath.row) {
+        if let rmCharacter = viewModel.getRMCharacter(atIndex: indexPath.row) {
+            let viewModel = viewModel.getDisplayCharacterDetailsViewModel(selectedCharacter: rmCharacter)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "DisplayCharacterDetailsViewController")
+            
+            if let displayCharacterDetailsVC = viewController as? DisplayCharacterDetailsViewController {
+                displayCharacterDetailsVC.configure(withViewModel: viewModel)
+                navigationController?.pushViewController(displayCharacterDetailsVC, animated: true)
+            }
         }
     }
 }
 
 extension ListCharactersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        listCharactersViewModel.getFiltersCount()
+        viewModel.getFiltersCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -107,7 +115,7 @@ extension ListCharactersViewController: UICollectionViewDataSource {
         guard let filterCollectionCell = collectionCell as? FilterCollectionCell else {
             return UICollectionViewCell()
         }
-        let filterOption = listCharactersViewModel.getFilter(atIndex: indexPath.row)
+        let filterOption = viewModel.getFilter(atIndex: indexPath.row)
         
         filterCollectionCell.configure(with: filterOption)
         
@@ -117,10 +125,10 @@ extension ListCharactersViewController: UICollectionViewDataSource {
 
 extension ListCharactersViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let filterOption = listCharactersViewModel.getFilter(atIndex: indexPath.row)
+        let filterOption = viewModel.getFilter(atIndex: indexPath.row)
         
-        listCharactersViewModel.resetPagination()
-        listCharactersViewModel.listCharacters(filterOption: filterOption,
+        viewModel.resetPagination()
+        viewModel.listCharacters(filterOption: filterOption,
                                                errorHandler: listCharactersErrorHandler)
     }
 }

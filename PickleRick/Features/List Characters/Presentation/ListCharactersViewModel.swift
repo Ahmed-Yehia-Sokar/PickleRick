@@ -72,4 +72,9 @@ class ListCharactersViewModel {
         isPaginationOn = false
         dataSource.value = []
     }
+    
+    func getDisplayCharacterDetailsViewModel(selectedCharacter: RMCharacter) -> DisplayCharacterDetailsViewModel {
+        let viewModel = DisplayCharacterDetailsViewModelProvider.provide(withCharacter: selectedCharacter)
+        return viewModel
+    }
 }
