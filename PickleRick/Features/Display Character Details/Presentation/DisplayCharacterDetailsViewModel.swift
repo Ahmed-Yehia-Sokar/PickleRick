@@ -35,4 +35,8 @@ class DisplayCharacterDetailsViewModel {
     func getCharacterGender() -> String {
         selectedCharacter.gender
     }
+    
+    func getCharacterLocation() -> String {
+        selectedCharacter.location
+    }
 }

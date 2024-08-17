@@ -15,7 +15,7 @@ class DisplayCharacterDetailsViewController: UIViewController {
     @IBOutlet weak var characterStatusLabel: UILabel!
     @IBOutlet weak var characterSpeciesLabel: UILabel!
     @IBOutlet weak var characterGenderLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var characterLocationLabel: UILabel!
     
     // MARK: - properties
     private var viewModel: DisplayCharacterDetailsViewModel?
@@ -32,6 +32,7 @@ class DisplayCharacterDetailsViewController: UIViewController {
         setupCharacterStatusLabel()
         setupCharacterSpeciesLabel()
         setupCharacterGenderLabel()
+        setupCharacterLocationLabel()
     }
     
     // MARK: - private methods
@@ -59,5 +60,10 @@ class DisplayCharacterDetailsViewController: UIViewController {
     private func setupCharacterGenderLabel() {
         guard let viewModel = viewModel else { return }
         characterGenderLabel.text = viewModel.getCharacterGender()
+    }
+    
+    private func setupCharacterLocationLabel() {
+        guard let viewModel = viewModel else { return }
+        characterLocationLabel.text = viewModel.getCharacterLocation()
     }
 }

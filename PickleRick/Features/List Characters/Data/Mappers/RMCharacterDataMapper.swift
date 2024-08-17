@@ -21,11 +21,18 @@ class RMCharacterDataMapper {
             let species = characterInfo.getString("species")
             let gender = characterInfo.getString("gender")
             let image = characterInfo.getString("image")
+            var location = ""
+            
+            if let locationDic = characterInfo["location"] as? [String: Any] {
+                location = locationDic.getString("name")
+            }
+            
             let rmCharacter = RMCharacter(name: name,
                                           status: status,
                                           species: species,
                                           gender: gender,
-                                          image: image)
+                                          image: image,
+                                          location: location)
             
             result.append(rmCharacter)
         }
